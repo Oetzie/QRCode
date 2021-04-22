@@ -1,0 +1,39 @@
+{
+    "name": "QRCode",
+    "lowCaseName": "qrcode",
+    "description": "An QR Code solution for MODX Revolution.",
+    "author": "Oetzie.nl",
+    "version": "1.0.0-pl",
+    "package":{
+        "elements": {
+            "plugins": [{
+                "name": "QRCode",
+                "file": "qrcode.plugin.php",
+                "events": [
+                    "OnHandleRequest",
+                    "OnDocFormRender"
+                ]
+            }]
+        },
+        "systemSettings": [{
+            "key": "branding_url",
+            "value": "//www.oetzie.nl",
+            "area": "qrcode"
+        },{
+            "key": "branding_url_help",
+            "value": "//www.oetzie.nl",
+            "area": "qrcode"
+        }]
+    },
+    "build":{
+        "readme": "docs/readme.txt",
+        "license": "docs/license.txt",
+        "changelog": "docs/changelog.txt",
+        "resolver": {
+            "after": [
+                "tables.resolver.php",
+                "permissions.resolver.php"
+            ]
+        }
+    }
+}
